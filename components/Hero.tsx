@@ -71,14 +71,14 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
           <div className="flex justify-center items-center gap-8">
             <div className="flex flex-col items-center gap-3 group">
               <div className="w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-gray-800 to-black border border-gray-700 flex items-center justify-center group-hover:border-primary/50 transition-colors overflow-hidden p-3">
-                <img src="./assets/ccc_logo.png" alt="CCC Logo" className="w-full h-full object-contain" />
+                <img src="/algo-open/assets/ccc_logo.png" alt="CCC Logo" className="w-full h-full object-contain" />
               </div>
               <span className="text-sm text-gray-400 font-mono tracking-widest">CCC RSCOE</span>
             </div>
             <span className="text-3xl text-gray-500 font-light mb-8">×</span>
             <div className="flex flex-col items-center gap-3 group">
               <div className="w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-gray-800 to-black border border-gray-700 flex items-center justify-center group-hover:border-secondary/50 transition-colors overflow-hidden p-3">
-                <img src="./assets/codechef_logo.png" alt="CodeChef Logo" className="w-full h-full object-contain" />
+                <img src="/algo-open/assets/codechef_logo.png" alt="CodeChef Logo" className="w-full h-full object-contain" />
               </div>
               <span className="text-sm text-gray-400 font-mono tracking-widest">CODECHEF</span>
             </div>

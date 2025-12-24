@@ -10,7 +10,7 @@ const Sponsors: React.FC = () => {
           {/* CodeChef Logo */}
           <div className="flex flex-col items-center gap-3 group">
             <div className="w-40 h-40 md:w-48 md:h-48 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-6 group-hover:border-primary/50 transition-all group-hover:bg-white/10">
-              <img src="./assets/codechef_logo.png" alt="CodeChef Logo" className="w-full h-full object-contain" />
+              <img src="/algo-open/assets/codechef_logo.png" alt="CodeChef Logo" className="w-full h-full object-contain" />
             </div>
             <span className="text-xs text-gray-500 font-mono tracking-widest group-hover:text-white transition-colors">CODECHEF</span>
           </div>

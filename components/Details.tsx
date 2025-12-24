@@ -15,7 +15,7 @@ const Details: React.FC = () => {
                         <p className="text-gray-400">CSBS Dept</p>
                         <p className="text-sm text-gray-500">JSPM's RSCOE, Tathawade</p>
                         <div className="mt-4 h-32 w-full bg-gray-800 rounded-lg overflow-hidden">
-                            <img src="./assets/csbs_dept.png" alt="CSBS Department" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
+                            <img src="/algo-open/assets/csbs_dept.png" alt="CSBS Department" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
                         </div>
                     </div>
 

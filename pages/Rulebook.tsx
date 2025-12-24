@@ -24,7 +24,7 @@ const Rulebook: React.FC = () => {
                     {/* Logo */}
                     <div className="mb-10 relative group">
                         <div className="w-32 h-32 md:w-40 md:h-40 border-2 border-dashed border-accent/40 rounded-full flex items-center justify-center bg-white/5 shadow-[0_0_40px_rgba(255,94,38,0.1)] group-hover:shadow-[0_0_60px_rgba(255,94,38,0.3)] group-hover:border-accent transition-all duration-500 backdrop-blur-sm overflow-hidden p-4">
-                            <img src="./assets/ccc_logo.png" alt="CCC Logo" className="w-full h-full object-contain" />
+                            <img src="/algo-open/assets/ccc_logo.png" alt="CCC Logo" className="w-full h-full object-contain" />
                         </div>
                         <div className="absolute inset-0 rounded-full bg-accent/5 blur-xl -z-10 group-hover:bg-accent/10 transition-all duration-500"></div>
                     </div>
@@ -48,7 +48,7 @@ const Rulebook: React.FC = () => {
 
                                 <div className="group relative">
                                     <div className="w-25 h-20 md:w-30 md:h-20 border border-white/20 rounded-xl flex items-center justify-center bg-white/5 hover:border-accent/40 hover:bg-white/10 transition-all duration-300 overflow-hidden p-2">
-                                        <img src="./assets/codechef_logo.png" alt="CodeChef Logo" className="w-full h-full object-contain" />
+                                        <img src="/algo-open/assets/codechef_logo.png" alt="CodeChef Logo" className="w-full h-full object-contain" />
                                     </div>
                                 </div>
 
