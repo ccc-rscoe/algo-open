@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./assets/ccc_logo.png" />
   <title>CCC's Algorithmic Open</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <script>
     tailwind.config = {
@@ -17,14 +18,24 @@
         extend: {
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
+            mono: ['"Fira Code"', 'monospace'],
           },
           colors: {
-            background: '#0f172a',
-            surface: '#1e293b',
-            primary: '#38bdf8', // Sky 400
-            secondary: '#818cf8', // Indigo 400
-            accent: '#2dd4bf', // Teal 400
+            background: '#05101a',
+            surface: '#0a1929',
+            primary: '#ff5e26',
+            secondary: '#ff8c00',
+            accent: '#ff5e26',
+            muted: '#a0a0a0',
+          },
+          animation: {
+            'fade-in-up': 'fadeInUp 1s ease-out forwards',
+          },
+          keyframes: {
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            }
           }
         }
       }
@@ -36,20 +47,40 @@
     }
 
     body {
-      background-color: #0f172a;
-      color: #f8fafc;
+      background-color: #05101a;
+      color: #e0e0e0;
     }
 
     .glass-card {
-      background: rgba(30, 41, 59, 0.7);
+      background: rgba(10, 25, 41, 0.8);
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .gradient-text {
-      background: linear-gradient(to right, #38bdf8, #818cf8, #2dd4bf);
+      background: linear-gradient(to right, #ff5e26, #ff8c00, #ffaa00);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      color: transparent;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #05101a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ff5e26;
     }
   </style>
   <script type="importmap">
@@ -58,7 +89,8 @@
     "react": "https://esm.sh/react@^19.2.3",
     "react/": "https://esm.sh/react@^19.2.3/",
     "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.1.1"
   }
 }
 </script>

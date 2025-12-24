@@ -29,7 +29,7 @@ const Countdown: React.FC = () => {
 
   const TimeBox = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="w-16 h-16 md:w-20 md:h-20 bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(56,189,248,0.1)]">
+      <div className="w-16 h-16 md:w-20 md:h-20 bg-black/30 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(255,94,38,0.1)]">
         <span className="text-2xl md:text-3xl font-mono font-bold text-white">
           {value > 0 ? value.toString().padStart(2, '0') : '00'}
         </span>

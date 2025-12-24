@@ -9,18 +9,18 @@ const Details: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Location */}
-                    <div className="glass-card p-6 rounded-xl hover:bg-surface/50 transition-colors">
+                    <div className="glass-card p-6 rounded-xl hover:bg-surface/50 transition-colors border-l-4 border-secondary">
                         <MapPin className="w-8 h-8 text-secondary mb-4" />
                         <h3 className="text-lg font-semibold text-white mb-2">Venue</h3>
                         <p className="text-gray-400">CSBS Dept</p>
                         <p className="text-sm text-gray-500">JSPM's RSCOE, Tathawade</p>
                         <div className="mt-4 h-32 w-full bg-gray-800 rounded-lg overflow-hidden">
-                            <img src="https://picsum.photos/400/200?grayscale" alt="Map Placeholder" className="w-full h-full object-cover opacity-60 hover:opacity-80 transition-opacity" />
+                            <img src="./assets/csbs_dept.png" alt="CSBS Department" className="w-full h-full object-cover opacity-80 hover:opacity-100 transition-opacity" />
                         </div>
                     </div>
 
                     {/* Time */}
-                    <div className="glass-card p-6 rounded-xl hover:bg-surface/50 transition-colors">
+                    <div className="glass-card p-6 rounded-xl hover:bg-surface/50 transition-colors border-l-4 border-primary">
                         <Calendar className="w-8 h-8 text-primary mb-4" />
                         <h3 className="text-lg font-semibold text-white mb-2">Date & Time</h3>
                         <p className="text-gray-400">30th December</p>
