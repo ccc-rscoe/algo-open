@@ -1,5 +1,6 @@
 import React from 'react';
-import { ChevronRight, Code2, Cpu, FileText } from 'lucide-react';
+import { ChevronRight, FileText } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Countdown from './Countdown';
 
 interface HeroProps {
@@ -17,12 +18,14 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-card border-primary/30 text-primary text-xs font-mono mb-8 animate-fade-in-up">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border-accent/50 text-sm font-mono mb-8 animate-fade-in-up shadow-[0_0_15px_rgba(255,94,38,0.3)]">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent"></span>
             </span>
-            REGISTER FOR FREE NOW • LIMITED SEATS AVAILABLE
+            <span className="gradient-text font-semibold">REGISTER FOR FREE NOW</span>
+            <span className="text-accent">•</span>
+            <span className="text-white font-medium">LIMITED SEATS AVAILABLE</span>
           </div>
 
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-6">
@@ -34,44 +37,56 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
             An ICPC-style competitive programming showdown organized by the <span className="text-white font-medium">Competitive Coding Club of RSCOE</span>.
           </p>
 
+          {/* Prize Pool Highlight */}
+          <div className="mt-8 inline-flex items-center gap-4 px-8 py-5 rounded-2xl glass-card border-accent/50 animate-pulse shadow-[0_0_30px_rgba(255,94,38,0.4)] hover:shadow-[0_0_40px_rgba(255,94,38,0.6)] transition-shadow duration-300">
+            <span className="text-5xl">🏆</span>
+            <div className="text-left">
+              <p className="text-sm text-accent font-mono uppercase tracking-wider font-semibold">Prize Pool</p>
+              <p className="text-4xl md:text-5xl font-extrabold gradient-text">₹30,000<sup className="text-sm align-super">*</sup></p>
+            </div>
+          </div>
+
           <Countdown />
 
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button
               onClick={onRegisterClick}
-              className="group relative inline-flex items-center justify-center px-8 py-3 text-base font-bold text-background bg-white rounded-full overflow-hidden transition-all hover:bg-primary hover:text-white hover:shadow-[0_0_20px_rgba(56,189,248,0.5)]"
+              className="group relative inline-flex items-center justify-center px-8 py-3 text-base font-bold text-background bg-white rounded-full overflow-hidden transition-all hover:bg-primary hover:text-white hover:shadow-[0_0_20px_rgba(255,94,38,0.5)]"
             >
               <span className="mr-2">Register Your Team</span>
               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
-            <a
-              href="https://drive.google.com/placeholder"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/rulebook"
               className="group inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-white/5 border border-white/10 rounded-full hover:bg-white/10 transition-all"
             >
               <FileText className="w-4 h-4 mr-2 text-gray-400 group-hover:text-white transition-colors" />
               Check Rulebook
-            </a>
+            </Link>
           </div>
         </div>
 
-        {/* Club Logo Placeholder */}
-        <div className="mt-16 flex justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-gray-800 to-black border border-gray-700 flex items-center justify-center group-hover:border-primary/50 transition-colors">
-              <Code2 className="w-10 h-10 text-gray-400 group-hover:text-primary transition-colors" />
+        {/* Club Logo */}
+        <div className="mt-16 flex flex-col items-center gap-4 opacity-80 hover:opacity-100 transition-all duration-500">
+          <div className="flex justify-center items-center gap-8">
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-gray-800 to-black border border-gray-700 flex items-center justify-center group-hover:border-primary/50 transition-colors overflow-hidden p-3">
+                <img src="./assets/ccc_logo.png" alt="CCC Logo" className="w-full h-full object-contain" />
+              </div>
+              <span className="text-sm text-gray-400 font-mono tracking-widest">CCC RSCOE</span>
             </div>
-            <span className="text-xs text-gray-500 font-mono tracking-widest">CCC RSCOE</span>
-          </div>
-          <div className="h-px w-10 bg-gray-700"></div>
-          <div className="flex flex-col items-center gap-2 group">
-            <div className="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-gray-800 to-black border border-gray-700 flex items-center justify-center group-hover:border-secondary/50 transition-colors">
-              <Cpu className="w-10 h-10 text-gray-400 group-hover:text-secondary transition-colors" />
+            <span className="text-3xl text-gray-500 font-light mb-8">×</span>
+            <div className="flex flex-col items-center gap-3 group">
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-2xl bg-gradient-to-br from-gray-800 to-black border border-gray-700 flex items-center justify-center group-hover:border-secondary/50 transition-colors overflow-hidden p-3">
+                <img src="./assets/codechef_logo.png" alt="CodeChef Logo" className="w-full h-full object-contain" />
+              </div>
+              <span className="text-sm text-gray-400 font-mono tracking-widest">CODECHEF</span>
             </div>
-            <span className="text-xs text-gray-500 font-mono tracking-widest">ALGO OPEN</span>
           </div>
         </div>
+
+        {/* Terms & Conditions */}
+        <p className="mt-8 text-xs text-gray-600 text-center">*Terms and conditions apply</p>
       </div>
     </div>
   );

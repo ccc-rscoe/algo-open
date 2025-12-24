@@ -1,35 +1,16 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import WhyParticipate from './components/WhyParticipate';
-import Prizes from './components/Prizes';
-import Details from './components/Details';
-import FAQ from './components/FAQ';
-import Sponsors from './components/Sponsors';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Rulebook from './pages/Rulebook';
 
 const App: React.FC = () => {
-  const handleRegister = () => {
-    window.open('https://forms.google.com/placeholder', '_blank');
-  };
-
   return (
-    <div className="min-h-screen bg-background text-gray-100 font-sans selection:bg-primary/30 selection:text-white">
-      <Navbar onRegisterClick={handleRegister} />
-      
-      <main>
-        <Hero onRegisterClick={handleRegister} />
-        <About />
-        <WhyParticipate />
-        <Prizes />
-        <Details />
-        <FAQ />
-        <Sponsors />
-      </main>
-
-      <Footer />
-    </div>
+    <BrowserRouter basename="/algo-open">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/rulebook" element={<Rulebook />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

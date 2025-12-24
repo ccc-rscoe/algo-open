@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Twitter, Instagram, Mail } from 'lucide-react';
+import { Github, Instagram, Mail, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -11,10 +11,10 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="flex space-x-6">
-          <a href="https://github.com/ccc-rscoe" className="text-gray-400 hover:text-white transition-colors"><Github className="w-5 h-5" /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors"><Twitter className="w-5 h-5" /></a>
-          <a href="#" className="text-gray-400 hover:text-white transition-colors"><Mail className="w-5 h-5" /></a>
+          <a href="https://github.com/competitive-code" className="text-gray-400 hover:text-white transition-colors"><Github className="w-5 h-5" /></a>
+          <a href="https://www.instagram.com/competitive_coding_club" className="text-gray-400 hover:text-white transition-colors"><Instagram className="w-5 h-5" /></a>
+          <a href="https://www.linkedin.com/company/competitivecoding-club/" className="text-gray-400 hover:text-white transition-colors"><Linkedin className="w-5 h-5" /></a>
+          <a href="mailto:ccclub_csbs@jspmrscoe.edu.in" className="text-gray-400 hover:text-white transition-colors"><Mail className="w-5 h-5" /></a>
         </div>
       </div>
     </footer>
