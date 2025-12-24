@@ -17,7 +17,7 @@ const Navbar: React.FC<NavbarProps> = ({ onRegisterClick }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <img src="./assets/ccc_logo.png" alt="CCC Logo" className="h-16 w-16 rounded" />
+            <img src="/algo-open/assets/ccc_logo.png" alt="CCC Logo" className="h-16 w-16 rounded" />
             <span className="font-mono font-bold text-lg tracking-tighter text-white">
               CCC_ALGO_OPEN
             </span>
