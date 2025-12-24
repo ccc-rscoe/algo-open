@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const Countdown: React.FC = () => {
   // Set target date to December 30, 2025 10:00:00
-  const targetDate = new Date('2025-12-30T10:00:00').getTime();
+  const targetDate = new Date('2025-12-29T23:59:59').getTime();
 
   const [timeLeft, setTimeLeft] = useState(targetDate - Date.now());
 
