@@ -42,7 +42,7 @@ const Hero: React.FC<HeroProps> = ({ onRegisterClick }) => {
             <span className="text-5xl">🏆</span>
             <div className="text-left">
               <p className="text-sm text-accent font-mono uppercase tracking-wider font-semibold">Prize Pool</p>
-              <p className="text-4xl md:text-5xl font-extrabold gradient-text">₹30,000<sup className="text-sm align-super">*</sup></p>
+              <p className="text-4xl md:text-5xl font-extrabold"><span className="gradient-text">₹30,000</span><sup className="text-sm align-super gradient-text">*</sup></p>
             </div>
           </div>
 
